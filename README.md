@@ -1,2 +1,9 @@
 # NJX
 THE PAGE DESIGN FOR NJX AI STUDIO!
+
+
+
+
+
+
+# wanghai
