@@ -8,13 +8,13 @@
 # General
 --------------------------------------------------------------*/
 body {
-  background: #fff;
-  color: #444;
+  background: #f5f8fc;
+  color: #4b5563;
   font-family: "Open Sans", sans-serif;
 }
 
 a {
-  color: #50d8af;
+  color: #2d7ff9;
   transition: 0.5s;
 }
 
@@ -71,9 +71,9 @@ h1, h2, h3, h4, h5, h6 {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: #fff;
+  background: #f8fbff;
   padding: 10px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgba(12, 46, 138, 0.08);
   font-size: 14px;
 }
 
@@ -113,16 +113,24 @@ h1, h2, h3, h4, h5, h6 {
   border-left: 0;
 }
 
+.topbar-note {
+  color: #64748b;
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 #header {
-  padding: 20px 0;
+  padding: 18px 0;
   height: 84px;
   transition: all 0.5s;
   z-index: 997;
-  background: #fff;
-  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  box-shadow: 0px 12px 24px 0px rgba(15, 23, 42, 0.05);
 }
 
 #header #logo h1 {
@@ -142,6 +150,10 @@ h1, h2, h3, h4, h5, h6 {
 
 #header #logo h1 a span {
   color: #50d8af;
+}
+
+#header #logo h1 a {
+  letter-spacing: -0.02em;
 }
 
 #header #logo img {
@@ -167,7 +179,8 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #intro {
   width: 100%;
-  height: 60vh;
+  height: 72vh;
+  min-height: 620px;
   position: relative;
   background: url("../img/intro-carousel/1.jpg") no-repeat;
   background-size: cover;
@@ -189,9 +202,20 @@ h1, h2, h3, h4, h5, h6 {
 
 #intro .intro-content h2 {
   color: #0c2e8a;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
   font-size: 64px;
-  font-weight: 700;
+  font-weight: 800;
+  line-height: 1.06;
+  max-width: 980px;
+  letter-spacing: -0.03em;
+}
+
+#intro .intro-content .intro-lead {
+  max-width: 760px;
+  margin: 0 auto 18px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #475569;
 }
 
 #intro .intro-content h2 span {
@@ -244,7 +268,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #intro #intro-carousel::before {
   content: '';
-  background-color: rgba(255, 255, 255, 0.7);
+  background: linear-gradient(180deg, rgba(248,250,252,0.82), rgba(248,250,252,0.62));
   position: absolute;
   height: 100%;
   width: 100%;
@@ -350,6 +374,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu li:hover > a, .nav-menu > .menu-active > a {
   color: #50d8af;
+}
+
+.nav-menu > li:last-child a {
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: rgba(45, 127, 249, 0.08);
+  color: #2d7ff9;
+}
+
+.nav-menu > li:last-child:hover a {
+  background: rgba(45, 127, 249, 0.14);
 }
 
 .nav-menu > li {
@@ -508,9 +543,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 32px;
   color: #0c2e8a;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 800;
   position: relative;
   padding-bottom: 20px;
+  letter-spacing: .04em;
 }
 
 .section-header h2::before {
@@ -601,8 +637,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 #services .box {
   padding: 40px;
   margin-bottom: 40px;
-  box-shadow: 10px 10px 15px rgba(73, 78, 92, 0.1);
+  box-shadow: 0 16px 30px rgba(73, 78, 92, 0.08);
   background: #fff;
+  border-radius: 18px;
   transition: 0.4s;
 }
 
@@ -704,8 +741,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Our Portfolio Section
 --------------------------------*/
 #portfolio {
-  background: #fff;
-  padding: 30px 0;
+  background: #f8fbff;
+  padding: 40px 0;
 }
 
 #portfolio .portfolio-overlay {
@@ -764,7 +801,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Testimonials Section
 --------------------------------*/
 #testimonials {
-  padding: 30px 0;
+  padding: 40px 0;
+  background: #ffffff;
 }
 
 #testimonials .testimonial-item {
@@ -773,7 +811,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 30px 15px;
   text-align: center;
   min-height: 350px;
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  box-shadow: 0px 12px 28px rgba(15, 23, 42, 0.08);
+  background: rgba(255,255,255,.98);
 }
 
 @media (max-width: 767px) {
@@ -843,7 +883,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Call To Action Section
 --------------------------------*/
 #call-to-action {
-  background: #081e5b;
+  background: linear-gradient(135deg, #0b1f5f, #12398f);
   background-size: cover;
   padding: 40px 0;
 }
@@ -888,13 +928,17 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Our Team Section
 --------------------------------*/
 #team {
-  background: #fff;
-  padding: 30px 0 0 0;
+  background: #f8fbff;
+  padding: 40px 0 10px 0;
 }
 
 #team .member {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+  background: #fff;
 }
 
 #team .member .pic {
@@ -907,9 +951,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #team .member .details {
-  background: #50d8af;
+  background: linear-gradient(135deg, #163c96, #2d7ff9);
   color: #fff;
-  padding: 15px;
+  padding: 18px 15px;
   border-radius: 0 0 3px 3px;
 }
 
@@ -941,7 +985,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Contact Section
 --------------------------------*/
 #contact {
-  padding: 30px 0;
+  padding: 40px 0;
+  background: #ffffff;
 }
 
 #contact .contact-info {
@@ -979,6 +1024,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #contact .contact-address, #contact .contact-phone, #contact .contact-email {
   margin-bottom: 20px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
 }
 
 @media (min-width: 768px) {
@@ -1038,17 +1086,18 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .form input, #contact .form textarea {
-  padding: 10px 14px;
-  border-radius: 0;
+  padding: 12px 14px;
+  border-radius: 12px;
   box-shadow: none;
   font-size: 15px;
+  border: 1px solid rgba(15,23,42,.08);
 }
 
 #contact .form button[type="submit"] {
-  background: #50d8af;
+  background: linear-gradient(135deg, #163c96, #2d7ff9);
   border: 0;
-  border-radius: 3px;
-  padding: 10px 30px;
+  border-radius: 999px;
+  padding: 12px 32px;
   color: #fff;
   transition: 0.4s;
   cursor: pointer;
@@ -1062,7 +1111,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #f2f5f8;
+  background: #0f172a;
+  color: rgba(255,255,255,.84);
   padding: 0 0 30px 0;
   font-size: 14px;
 }
@@ -1075,9 +1125,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 #footer .credits {
   text-align: center;
   font-size: 13px;
-  color: #555;
+  color: rgba(255,255,255,.56);
 }
 
 #footer .credits a {
-  color: #0c2e8a;
+  color: #8ec5ff;
 }
