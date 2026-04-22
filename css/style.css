@@ -971,7 +971,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #team .member .social {
-  margin-top: 5px;
+  margin-top: 8px;
 }
 
 #team .member .social a {
@@ -981,6 +981,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 #team .member .social i {
   font-size: 16px;
   margin: 0 2px;
+}
+
+#team .member .team-note span {
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255,255,255,.78);
 }
 
 /* Contact Section
